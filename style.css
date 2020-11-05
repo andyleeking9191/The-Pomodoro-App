@@ -1,0 +1,208 @@
+/***************
+ General Layout
+***************/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.app-container {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.flex-container--column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.section__title {
+    color: #000000;
+    font-size: 2.25rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.section__title--green {
+    color: #93D33D;
+}
+
+.section__text {
+    color: black;
+    font-weight: 600;
+    letter-spacing: .6px;
+}
+
+.btn {
+    padding: .5em 1.5em;
+    border-radius: 100px;
+    background-color: #93D33D;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.btn:hover,
+.btn:focus {
+    cursor: pointer;
+    opacity: .9;
+}
+
+/***************
+     Modal
+****************/
+
+.modal-background {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: #2D7790;
+    border-radius: 10px;
+    padding: 2em 1em;;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.modal__content-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.modal__title {
+    color: #93D33D;
+    margin-bottom: .75em;
+    font-size: 1.2rem;
+}
+
+.modal__input {
+    border-radius: 10px;
+    margin-bottom: 1em;
+    padding: .5em 1em;
+    font-size: .9rem;
+    outline: none;
+    border: none;
+}
+
+.modal__input--select {
+
+}
+
+
+.btn--modal {
+  margin-top: .75rem;
+}
+
+/***************
+  Intro Section
+****************/
+
+.intro-section {
+    background-color: #cf351a;
+    height: 100vh;
+    padding: 1em 0;
+}
+
+/***************
+  Timer Section
+****************/
+
+.timer-section {
+    padding: 2em 0 3em;
+    background-color: #cf351a;
+    display: none;
+}
+
+.timer {
+    background-color: #146681;
+    margin: 2.5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.timer__digits {
+    color: rgb(0, 0, 0,);
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.goal-section {
+    min-height: 40vh;
+    padding: 1em 0;
+    background-color:#ffdd71;
+    display: none;
+}
+
+  .goal-section__title {
+      color: #146681;
+      font-size: 2.5rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+  }
+
+  .tomato-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+/***************
+     Footer
+****************/
+
+
+.footer {
+    background-color: #0A5169;
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .75rem;
+    display: none;
+}
+
+.footer__text {
+    color: rgba(0, 0, 0, .4)
+}
+
+.footer__link {
+    text-decoration: none;
+    color: inherit
+}

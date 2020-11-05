@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pomodoro App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main class="main">
+        <div id="modal-background" class="modal-background">
+            <form class="modal">
+                <div class="modal__content-container">
+                    <h2 class="modal__title">What are you working on today?</h2>
+                    <input class="modal__input" type="text" placeholder="enter study topic or work project here">
+                    <h2 class="modal__title">What is today's time goal?</h2>
+                    <select class="modal__input modal__input--select" name="" id="">
+                        <option value="1">30 minutes</option>
+                        <option value="2">1 hour</option>
+                        <option value="3">1 1/2 hours</option>
+                        <option value="4">2 hours</option>
+                        <option value="5">2 1/2 hours</option>
+                        <option value="6">3 hours</option>
+                        <option value="7">3 1/2 hours</option>
+                        <option value="8">4 hours</option>
+                        <option value="9">4 1/2 hours</option>
+                        <option value="10">5 hours</option>
+                        <option value="11">5 1/2 hours</option>
+                        <option value="12">6 hours</option>
+                        <option value="13">6 1/2 hours</option>
+                        <option value="14">7 hours</option>
+                        <option value="15">7 1/2 hours</option>
+                        <option value="16">8 hours</option>
+                    </select>
+                    <button id="set-goals-btn" class="btn btn--modal" type="submit">Begin</button>
+                </div>
+            </form>
+        </div>
+        <section id="intro-section" class="intro-section">
+            <div class="app-container">
+                <h1 class="section__title section__title--green">The Pomodoro App</h1>
+                <p class="section__text">
+                    The Pomodoro Technique is a method used to help stay focused and time efficient when working on projects or studying. The technique uses a 25 minute timer to break down the project into single task intervals. When an interval is finished a small break is taken to rejuvinate and avoid burnout. With every completed interval a small tomato is jotted down to help you visually see your progress and to help build up to a larger goal.
+                </p>
+                <p class="section__text">
+                    The Pomodoro technique was developed by Francesco Cirillo in the late 1980s. He used the technique while in college to avoid being overwellmed with his studies. Cirillo used a tomato shaped kitchen timer that he found when he first started out his new technique. The word Pomodoro means tomato in Italian and thus the pomodoro technique was born.
+                </p>
+                <h2>The Pomodoro App enables you to use the technique online for free!</h2>
+                <button class="btn" id="intro-start-btn">Start</button>
+            </div>
+        </section>
+        <section id="timer-section" class="timer-section">
+            <div class="app-container flex-container--column">
+                <h1 class="section__title section__title--green">The Pomodoro App</h1>
+                <div class="timer">
+                    <time class="timer__digits" id="countdown-time">25:00</time>
+                </div>
+                <button class="btn" id="start-timer-btn">
+                    Start timer
+                </button>
+            </div>
+        </section>
+        <section id="goal-section" class="goal-section">
+            <div class="app-container">
+                <h2 class="goal-section__title">Daily Goal</h2>
+                <div class="tomato-container" id="tomato-container"></div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="footer__text-container">
+            <p class="footer__text">
+                Tomato icons made by 
+                <a class="footer__link" href="https://www.flaticon.com/authors/icongeek26">Icongeek26</a> 
+                from
+                <a class="footer__link" href="https://www.flaticon.com/">www.flaticon.com</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
