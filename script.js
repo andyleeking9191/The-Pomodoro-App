@@ -2,6 +2,9 @@ const introStartBtn = document.getElementById("intro-start-btn")
 const setGoalsBtn = document.getElementById("set-goals-btn");
 const startTimerBtn = document.getElementById("start-timer-btn");
 
+let goalValue = 0;
+let studyGoals = [];
+
 
 introStartBtn.addEventListener("click", () => {
     document.getElementById("intro-section").style.display = "none";
@@ -9,7 +12,10 @@ introStartBtn.addEventListener("click", () => {
 })
 
 setGoalsBtn.addEventListener("click", (event) => {
-    event.preventDefault();
+    event.preventDefault()
+    goalValue = document.getElementById("goal-amount").value
+    setStudyGoals(goalValue)
+    populateGoalContainer()
     document.getElementById("modal-background").style.display = "none"
     document.getElementById("timer-section").style.display = "block"
     document.getElementById("goal-section").style.display = "block"
@@ -23,15 +29,13 @@ startTimerBtn.addEventListener("click", ()=> {
 
 
 
-let studyGoals = [];
-
 function setStudyGoals(studyBlocks) {
     for (let i = 0; i < studyBlocks; i++) {
         studyGoals.push("study-block");
     }
 }
 
-setStudyGoals(6);
+
 
 
 function populateGoalContainer() {
@@ -64,6 +68,7 @@ function countdownTime(minutes) {
             startTimerBtn.disabled = false;
             min =25;
             minutesPlaceholder = ""
+            populateGoalContainer()
             countdownTime.innerText = `${minutesPlaceholder}${min}:${secondsPlaceholder}${seconds}`;
         } else if (seconds <= 10) {
             secondsPlaceholder = 0;
