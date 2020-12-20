@@ -122,7 +122,7 @@ h1, h2 {
 
 
 .btn--modal {
-  margin-top: .75rem;
+  margin: .75rem;
 }
 
 /***************
@@ -131,8 +131,16 @@ h1, h2 {
 
 .intro-section {
     background-color: #cf351a;
-    height: 100vh;
+    min-height: 100vh;
     padding: 1em 0;
+}
+
+.intro-section__sub-title {
+    font-size: 1.2rem;
+}
+
+.btn--intro-section {
+    margin: .75rem 0;
 }
 
 /***************

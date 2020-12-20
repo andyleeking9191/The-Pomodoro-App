@@ -18,8 +18,7 @@ setGoalsBtn.addEventListener("click", (event) => {
 
 
 startTimerBtn.addEventListener("click", ()=> {
-    // countdownTime(25)
-    populateGoalContainer()
+     countdownTime(1)
 })
 
 
@@ -46,6 +45,7 @@ function populateGoalContainer() {
 }
 
 function countdownTime(minutes) {
+    startTimerBtn.disabled = true;
     const countdownTime = document.getElementById("countdown-time");
     let min = minutes;
     let seconds = 0;
@@ -61,6 +61,10 @@ function countdownTime(minutes) {
             seconds += 59;
         } else if (min === 0 && seconds === 0) {
             clearInterval(countdownInterval);
+            startTimerBtn.disabled = false;
+            min =25;
+            minutesPlaceholder = ""
+            countdownTime.innerText = `${minutesPlaceholder}${min}:${secondsPlaceholder}${seconds}`;
         } else if (seconds <= 10) {
             secondsPlaceholder = 0;
             seconds--;
